@@ -1,0 +1,44 @@
+Crud Operation App Development
+
+---------------------Installed packages---------------------
+
+-> nodemon : Whenever changes are made to the node application this helps to automatically detect them and restart the app.
+-> express : A node web framework. 
+
+----------------Used Commands and Keyboard Shortcuts------------------
+
+npm init      : Install npm
+node index.js : to run backend which is in index.js file
+Ctrl+c        : Kill a connection
+app.use(express.json()): allow to send any json file from client side
+npm i axios   : allow to make API requests using react app
+npm i cors    : backend server to allow an application to use backend api
+
+---------------------Errors and Solutions---------------------
+
+ES6 Modules : 
+package.json
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module", ----------------------------------->>>>>>>>>>>>>>> to use import statements directly
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"  ---------------------->>>>>>>>>>>>>>> for auto update index.js file whenver a change is made
+  },
+
+
+
+--------------------Challenges Faced-----------------------------
+
+In get method the mysql version did not support so it kept sending the error;
+"
+Upgrade your MySQL client. The error message suggests this as a possible solution. If you are using a MySQL client library in your application,
+try upgrading it to the latest version that supports the caching_sha2_password plugin.
+"
+had to install mysql2 because it supports pluging.
+so changed 
+import mysql from "mysql2"
+accordingly
